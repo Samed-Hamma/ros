@@ -1,0 +1,350 @@
+<?xml version="1.0"?>
+<!-- created with Phobos 0.7 -->
+  <robot name="moveo">
+
+    <link name="base_link">
+      <visual name="1M2.000">
+        <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/1M2.dae" scale="0.01 0.01 0.01"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+      <visual name="1M3">
+        <origin xyz="1.5 0 0.02503" rpy="1.5708 0 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/1M3.dae" scale="0.01 0.01 0.01"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+      <collision name="Cylinder">
+        <origin xyz="0 0 0.00647" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.0805" length="0.06461"/>
+        </geometry>
+      </collision>
+      <collision name="Cylinder.002">
+        <origin xyz="1.50688 0 0.03575" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.04" length="0.08"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="gripper_link">
+      <visual name="4M2">
+        <origin xyz="-0.0212 0.61933 -0.14499" rpy="-1.5708 -1.5708 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/4M2.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+      <visual name="4M2C">
+        <origin xyz="-0.26193 0.61933 -0.14499" rpy="-1.5708 1.5708 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/4M2C.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+      <visual name="Bottom Plate">
+        <origin xyz="-0.12562 -0.00569 0" rpy="1.5708 0 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/Bottom Plate.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </visual>
+      <visual name="Gripper Left">
+        <origin xyz="-0.41162 -0.52975 -0.14499" rpy="1.5708 0 -0.89472"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/Gripper Left.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </visual>
+      <visual name="Gripper Right">
+        <origin xyz="0.11494 -0.54232 -0.14503" rpy="-1.5708 0 -2.25239"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/Gripper Right.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </visual>
+      <visual name="Idol Gear">
+        <origin xyz="-0.38411 -0.10302 -0.14499" rpy="-1.5708 0 0.7854"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/Idol Gear.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </visual>
+      <visual name="Pivot Arm">
+        <origin xyz="0.06285 -0.34887 -0.1428" rpy="-1.5708 0 2.30658"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/Pivot Arm.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </visual>
+      <visual name="Pivot Arm.001">
+        <origin xyz="-0.3527 -0.34206 -0.14345" rpy="-1.5708 0 0.78821"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/Pivot Arm.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </visual>
+      <visual name="Servo Gear">
+        <origin xyz="0.09806 -0.10794 -0.14499" rpy="-1.5708 0 2.30761"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/Servo Gear.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </visual>
+      <visual name="Top Plate">
+        <origin xyz="-0.14123 -0.0057 -0.28998" rpy="-1.5708 0 3.14159"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/Top Plate.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </visual>
+      <collision name="Cube.009">
+        <origin xyz="-0.14161 0.38906 -0.14499" rpy="-1.5708 0 3.14159"/>
+        <geometry>
+          <box size="0.04651 0.05499 0.12084"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="lowerarm_link">
+      <visual name="3M2">
+        <origin xyz="-0.00081 -0.19411 -0.87495" rpy="-3.14159 1.5708 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/3M2.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+      <visual name="3M2C">
+        <origin xyz="-0.00081 0.19388 -0.87473" rpy="0 1.5708 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/3M2C.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+      <collision name="Cube.005">
+        <origin xyz="0 0 -0.86591" rpy="0 0 1.5708"/>
+        <geometry>
+          <box size="0.0769 0.07333 0.17338"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="shoulder_link">
+      <visual name="1M1">
+        <origin xyz="0 1.52828 0" rpy="0 -1.5708 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/1M1.dae" scale="0.01 0.01 0.01"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+      <visual name="2M1">
+        <origin xyz="0 0.40074 0" rpy="-3.14159 -1.5708 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/2M1.dae" scale="0.01 0.01 0.01"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+      <visual name="Tapa 2M1">
+        <origin xyz="0 0 -0.74" rpy="-1.5708 0 -2.0944"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/Tapa 2M1.dae" scale="0.01 0.01 0.01"/>
+        </geometry>
+        <material name="red"/>
+      </visual>
+      <visual name="Tapa 2M1.001">
+        <origin xyz="0 0 0.74" rpy="1.5708 0 -1.0472"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/Tapa 2M1.dae" scale="0.01 0.01 0.01"/>
+        </geometry>
+        <material name="red"/>
+      </visual>
+      <collision name="Cube">
+        <origin xyz="0 0.22913 -0.64741" rpy="1.5708 -1.5708 0"/>
+        <geometry>
+          <box size="0.03129 0.12 0.16541"/>
+        </geometry>
+      </collision>
+      <collision name="Cube.001">
+        <origin xyz="0 0.22913 0.64741" rpy="1.5708 -1.5708 0"/>
+        <geometry>
+          <box size="0.03129 0.12 0.16541"/>
+        </geometry>
+      </collision>
+      <collision name="Cylinder.001">
+        <origin xyz="0 1.36586 0" rpy="1.5708 -1.5708 0"/>
+        <geometry>
+          <cylinder radius="0.08101" length="0.055"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="upperarm_0">
+    </link>
+
+    <link name="upperarm_link">
+      <visual name="2M2H">
+        <origin xyz="0 2.12182 -0.23809" rpy="-1.5708 0 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/2M2H.dae" scale="0.01 0.01 0.01"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+      <visual name="2M2M">
+        <origin xyz="0 2.12182 0.23788" rpy="1.5708 0 -3.14159"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/2M2M.dae" scale="0.01 0.01 0.01"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+      <visual name="3M1">
+        <origin xyz="0.00013 0.47761 0" rpy="-3.14159 -1.5708 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/3M1.dae" scale="0.01 0.01 0.01"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+      <visual name="Tapa 3M1">
+        <origin xyz="0 0 -0.65" rpy="-1.5708 0 -2.0944"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/Tapa 3M1.dae" scale="0.01 0.01 0.01"/>
+        </geometry>
+        <material name="red"/>
+      </visual>
+      <visual name="Tapa 3M1.001">
+        <origin xyz="0 0 0.65" rpy="1.5708 0 -1.0472"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/Tapa 3M1.dae" scale="0.01 0.01 0.01"/>
+        </geometry>
+        <material name="red"/>
+      </visual>
+      <collision name="Cube.002">
+        <origin xyz="0 1.74217 0" rpy="1.5708 -1.5708 0"/>
+        <geometry>
+          <box size="0.09209 0.08471 0.21809"/>
+        </geometry>
+      </collision>
+      <collision name="Cube.003">
+        <origin xyz="0 0.34904 0.54892" rpy="1.5708 -1.5708 0"/>
+        <geometry>
+          <box size="0.02653 0.09561 0.16679"/>
+        </geometry>
+      </collision>
+      <collision name="Cube.004">
+        <origin xyz="0 0.34904 -0.54892" rpy="1.5708 -1.5708 0"/>
+        <geometry>
+          <box size="0.02653 0.09561 0.16679"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="world">
+    </link>
+
+    <link name="wrist_link">
+      <visual name="4M1">
+        <origin xyz="0 -0.29943 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/4M1.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+      <visual name="Tapa 4M1">
+        <origin xyz="0 0 -0.43" rpy="-1.5708 0 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/Tapa 4M1.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="red"/>
+      </visual>
+      <visual name="Tapa 4M1.001">
+        <origin xyz="0 0 0.43" rpy="1.5708 0 3.14159"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/Tapa 4M1.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="red"/>
+      </visual>
+      <visual name="Tapa TBB">
+        <origin xyz="0.33896 -0.85163 0" rpy="-1.5708 -1.5708 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/Tapa TBB.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="red"/>
+      </visual>
+      <collision name="Cube.006">
+        <origin xyz="0 -0.67005 0" rpy="-1.5708 -1.5708 0"/>
+        <geometry>
+          <box size="0.0769 0.0755 0.05193"/>
+        </geometry>
+      </collision>
+      <collision name="Cube.007">
+        <origin xyz="0 0.01157 -0.36667" rpy="-1.5708 -1.5708 0"/>
+        <geometry>
+          <box size="0.01772 0.07184 0.0827"/>
+        </geometry>
+      </collision>
+      <collision name="Cube.008">
+        <origin xyz="0 0.01157 0.36667" rpy="-1.5708 -1.5708 0"/>
+        <geometry>
+          <box size="0.01772 0.07184 0.0827"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="elbow" type="revolute">
+      <origin xyz="0 -2.21373 0" rpy="0 0 0"/>
+      <parent link="shoulder_link"/>
+      <child link="upperarm_link"/>
+      <axis xyz="0 0 1.0"/>
+      <limit lower="0" upper="6.28" effort="0" velocity="0"/>
+    </joint>
+
+    <joint name="fixed" type="fixed">
+      <origin xyz="0 0 0.32502" rpy="0 0 0"/>
+      <parent link="world"/>
+      <child link="base_link"/>
+    </joint>
+
+    <joint name="shoulder" type="revolute">
+      <origin xyz="0 0 0.40074" rpy="-1.5708 0 -1.5708"/>
+      <parent link="upperarm_0"/>
+      <child link="shoulder_link"/>
+      <axis xyz="0 0 1.0"/>
+      <limit lower="0" upper="6.28" effort="0" velocity="0"/>
+    </joint>
+
+    <joint name="shoulder_2" type="revolute">
+      <origin xyz="0 0 1.58028" rpy="0 0 0"/>
+      <parent link="base_link"/>
+      <child link="upperarm_0"/>
+      <axis xyz="0 0 1.0"/>
+      <limit lower="0" upper="6.28" effort="0" velocity="0"/>
+    </joint>
+
+    <joint name="wrist" type="revolute">
+      <origin xyz="0 0 0.95087" rpy="1.5708 0 3.14159"/>
+      <parent link="upperarm_link"/>
+      <child link="lowerarm_link"/>
+      <axis xyz="0 0 1.0"/>
+      <limit lower="0" upper="6.28" effort="0" velocity="0"/>
+    </joint>
+
+    <joint name="wrist_2" type="revolute">
+      <origin xyz="-0.14499 0.64959 -0.14161" rpy="-3.14159 1.5708 0"/>
+      <parent link="lowerarm_link"/>
+      <child link="wrist_link"/>
+      <axis xyz="0 0 1.0"/>
+      <limit lower="0" upper="6.28" effort="0" velocity="0"/>
+    </joint>
+
+    <joint name="wrist_3" type="revolute">
+      <origin xyz="-0.14499 0.64959 -0.14161" rpy="-3.14159 1.5708 0"/>
+      <parent link="wrist_link"/>
+      <child link="gripper_link"/>
+      <axis xyz="0 0 1.0"/>
+      <limit lower="0" upper="6.28" effort="0" velocity="0"/>
+    </joint>
+    
+    <material name="black">
+      <color rgba="0.016 0.016 0.016 1.0"/>
+    </material>
+
+    <material name="red">
+      <color rgba="0.64 0.0062 0.0064 1.0"/>
+    </material>
+
+  </robot>

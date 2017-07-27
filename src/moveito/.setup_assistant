@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: moveo
+    relative_path: urdf/moveotn.urdf
+  SRDF:
+    relative_path: config/moveotn.srdf
+  CONFIG:
+    author_name: Sam
+    author_email: hamma.samed@gmail.com
+    generated_timestamp: 1501016456

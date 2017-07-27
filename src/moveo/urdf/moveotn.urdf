@@ -1,0 +1,457 @@
+<?xml version="1.0"?>
+<!-- created with Phobos 0.7 -->
+  <robot name="moveotn">
+
+    <link name="base_link">
+      <inertial>
+        <origin xyz="0 0.033333 0.032917" rpy="0 0 0"/>
+        <mass value="0.6"/>
+        <inertia ixx="0.004398" ixy="0" ixz="0" iyy="0.001065" iyz="-4.2e-05" izz="0.005028"/>
+      </inertial>
+      <visual name="1M2.000">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/1M2.001.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="cool"/>
+      </visual>
+      <visual name="1M3.001">
+        <origin xyz="0 0.2 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/1M3.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="cool"/>
+      </visual>
+      <collision name="Cube">
+        <origin xyz="0 0.2 0.035" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.0753 0.0753 0.07"/>
+        </geometry>
+      </collision>
+      <collision name="Cylinder">
+        <origin xyz="0 0 0.0325" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.08" length="0.065"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="elbow_link">
+      <inertial>
+        <origin xyz="0 0 0.0445" rpy="0 0 0"/>
+        <mass value="1.2"/>
+        <inertia ixx="0.003556" ixy="0" ixz="0" iyy="0.003551" iyz="0" izz="0.001176"/>
+      </inertial>
+      <visual name="3M2">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/3M2.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="cool"/>
+      </visual>
+      <visual name="3M2C">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/3M2C.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="cool"/>
+      </visual>
+      <collision name="Cube.002">
+        <origin xyz="0 0 0.0885" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.078 0.07 0.077"/>
+        </geometry>
+      </collision>
+      <collision name="Cylinder.004">
+        <origin xyz="0 0 0.0005" rpy="0 1.570796 0"/>
+        <geometry>
+          <cylinder radius="0.048" length="0.075"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="gripper">
+      <inertial>
+        <origin xyz="0 0 0.049375" rpy="0 0 0"/>
+        <mass value="0.2"/>
+        <inertia ixx="0.000791" ixy="0" ixz="0" iyy="0.000677" iyz="0" izz="0.000194"/>
+      </inertial>
+      <visual name="4M2">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/4M2.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="cool"/>
+      </visual>
+      <visual name="4M2C">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/4M2C.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="cool"/>
+      </visual>
+      <visual name="Bottom Plate">
+        <origin xyz="0.003 0 0.041" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/Bottom Plate.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </visual>
+      <visual name="Gripper Left">
+        <origin xyz="0 0.040287 0.095251" rpy="0 -0.895633 -1.570796"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/Gripper Right.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </visual>
+      <visual name="Gripper Right">
+        <origin xyz="0 -0.040162 0.095217" rpy="0 -0.903294 1.570796"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/Gripper Right.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </visual>
+      <visual name="Idol Gear">
+        <origin xyz="0 0.014 0.065" rpy="-0.715585 0 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/Idol Gear.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="cool"/>
+      </visual>
+      <visual name="Pivot Arm L">
+        <origin xyz="0 -0.0202 0.1" rpy="0 0.861784 1.570796"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/Pivot Arm.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="cool"/>
+      </visual>
+      <visual name="Pivot Arm R">
+        <origin xyz="0 0.0202 0.1" rpy="0 -0.862186 1.570796"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/Pivot Arm.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="cool"/>
+      </visual>
+      <visual name="Servo Gear">
+        <origin xyz="0 -0.014 0.065" rpy="0.715585 0 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/Servo Gear.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="cool"/>
+      </visual>
+      <visual name="Top Plate">
+        <origin xyz="-0.003 0 0.041" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/Top Plate.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </visual>
+      <collision name="Cube.004">
+        <origin xyz="0 0 0.0985" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.05 0.12 0.12"/>
+        </geometry>
+      </collision>
+      <collision name="Cylinder.007">
+        <origin xyz="0 0 0.00025" rpy="0 1.570796 0"/>
+        <geometry>
+          <cylinder radius="0.037" length="0.0475"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="shoulder_2">
+      <inertial>
+        <origin xyz="0 0 0.104987" rpy="0 0 0"/>
+        <mass value="1.2"/>
+        <inertia ixx="0.007927" ixy="0" ixz="0" iyy="0.008822" iyz="0" izz="0.002497"/>
+      </inertial>
+      <visual name="2M2H">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/2M2H.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="cool"/>
+      </visual>
+      <visual name="2M2M">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/2M2M.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="cool"/>
+      </visual>
+      <visual name="3M1">
+        <origin xyz="0 0 0.078" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/3M1.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="cool"/>
+      </visual>
+      <visual name="Tapa3M1L">
+        <origin xyz="0.06 -0.00174 0.2205" rpy="0 0 -1.570796"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/Tapa3M1.001.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="red"/>
+      </visual>
+      <visual name="Tapa3M1R">
+        <origin xyz="-0.06 0 0.2205" rpy="0 0 1.570796"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/Tapa3M1.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="red"/>
+      </visual>
+      <collision name="Cube.001">
+        <origin xyz="0 0 0.116764" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.12399 0.084458 0.109527"/>
+        </geometry>
+      </collision>
+      <collision name="Cylinder.003">
+        <origin xyz="0 0 0.0005" rpy="0 1.570796 0"/>
+        <geometry>
+          <cylinder radius="0.06" length="0.095"/>
+        </geometry>
+      </collision>
+      <collision name="Cylinder.006">
+        <origin xyz="0.053 0 0.2205" rpy="0 1.570796 0"/>
+        <geometry>
+          <cylinder radius="0.048" length="0.026227"/>
+        </geometry>
+      </collision>
+      <collision name="Cylinder.009">
+        <origin xyz="-0.053 0 0.2205" rpy="0 1.570796 0"/>
+        <geometry>
+          <cylinder radius="0.048" length="0.026227"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="shoulder_link">
+      <inertial>
+        <origin xyz="0 0 0.073722" rpy="0 0 0"/>
+        <mass value="0.9"/>
+        <inertia ixx="0.004172" ixy="0" ixz="0" iyy="0.004842" iyz="0" izz="0.003269"/>
+      </inertial>
+      <visual name="1M1">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/1M1.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="cool"/>
+      </visual>
+      <visual name="2M1">
+        <origin xyz="0 0 0.0255" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/2M1.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="cool"/>
+      </visual>
+      <visual name="Tapa2M1L">
+        <origin xyz="-0.072 0 0.1655" rpy="0 0 1.570796"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/Tapa2M1.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="red"/>
+      </visual>
+      <visual name="Tapa2M1R">
+        <origin xyz="0.072 0 0.1655" rpy="0 0 -1.570796"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/Tapa2M1.001.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="red"/>
+      </visual>
+      <collision name="Cylinder.001">
+        <origin xyz="0 0 0.0475" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.08" length="0.095"/>
+        </geometry>
+      </collision>
+      <collision name="Cylinder.002">
+        <origin xyz="0.0645 0 0.1655" rpy="0 1.570796 0"/>
+        <geometry>
+          <cylinder radius="0.06" length="0.032"/>
+        </geometry>
+      </collision>
+      <collision name="Cylinder.008">
+        <origin xyz="-0.0645 0 0.1655" rpy="0 1.570796 0"/>
+        <geometry>
+          <cylinder radius="0.06" length="0.032"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="world">
+    </link>
+
+    <link name="wrist_1_link">
+      <inertial>
+        <origin xyz="0 0 0.044437" rpy="0 0 0"/>
+        <mass value="0.8"/>
+        <inertia ixx="0.001223" ixy="0" ixz="0" iyy="0.001461" iyz="0" izz="0.000866"/>
+      </inertial>
+      <visual name="4M1">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/4M1.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="cool"/>
+      </visual>
+      <visual name="Tapa4M1L">
+        <origin xyz="-0.04 0 0.09525" rpy="0 0 1.570796"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/Tapa4M1.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="red"/>
+      </visual>
+      <visual name="Tapa4M1R">
+        <origin xyz="0.04 0 0.09525" rpy="0 0 -1.570796"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/Tapa4M1.001.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="red"/>
+      </visual>
+      <visual name="TapaTBB">
+        <origin xyz="0 -0.031 0.010299" rpy="0 0 -3.141592"/>
+        <geometry>
+          <mesh filename="package://moveo/meshes/dae/TapaTBB.dae" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="red"/>
+      </visual>
+      <collision name="Cube.003">
+        <origin xyz="0 0 0.0275" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.078 0.07 0.055"/>
+        </geometry>
+      </collision>
+      <collision name="Cylinder.005">
+        <origin xyz="0.0348 0 0.09525" rpy="0 1.570796 0"/>
+        <geometry>
+          <cylinder radius="0.037159" length="0.01811"/>
+        </geometry>
+      </collision>
+      <collision name="Cylinder.010">
+        <origin xyz="-0.0348 0 0.09525" rpy="0 1.570796 0"/>
+        <geometry>
+          <cylinder radius="0.037159" length="0.01811"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="elbow" type="revolute">
+      <origin xyz="0 0 0.22" rpy="0 0 0"/>
+      <parent link="shoulder_2"/>
+      <child link="elbow_link"/>
+      <axis xyz="1.0 0 0"/>
+      <limit lower="-2.181662" upper="2.181662" effort="0" velocity="0"/>
+    </joint>
+
+    <joint name="fixed" type="fixed">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <parent link="world"/>
+      <child link="base_link"/>
+    </joint>
+
+    <joint name="hand" type="revolute">
+      <origin xyz="0 0 0.1275" rpy="0 0 0"/>
+      <parent link="elbow_link"/>
+      <child link="wrist_1_link"/>
+      <axis xyz="0 0 1.0"/>
+      <limit lower="-3.14" upper="3.14" effort="0" velocity="0"/>
+    </joint>
+
+    <joint name="hip" type="revolute">
+      <origin xyz="0 0 0.065" rpy="0 0 0"/>
+      <parent link="base_link"/>
+      <child link="shoulder_link"/>
+      <axis xyz="0 0 1.0"/>
+      <limit lower="-3.14" upper="3.14" effort="0" velocity="0"/>
+    </joint>
+
+    <joint name="shoulder" type="revolute">
+      <origin xyz="0 0 0.165" rpy="0 0 0"/>
+      <parent link="shoulder_link"/>
+      <child link="shoulder_2"/>
+      <axis xyz="1.0 0 0"/>
+      <limit lower="-2.024582" upper="2.024582" effort="0" velocity="0"/>
+    </joint>
+
+    <joint name="wrist" type="revolute">
+      <origin xyz="0 0 0.095" rpy="0 0 0"/>
+      <parent link="wrist_1_link"/>
+      <child link="gripper"/>
+      <axis xyz="1.0 0 0"/>
+      <limit lower="-1.954769" upper="1.954769" effort="0" velocity="0"/>
+    </joint>
+
+    <transmission name="tran0">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="hip">
+            <hardwareInterface>PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor0">
+            <hardwareInterface>PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="tran1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="shoulder">
+            <hardwareInterface>PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor1">
+            <hardwareInterface>PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="tran2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="elbow">
+            <hardwareInterface>PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor2">
+            <hardwareInterface>PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="tran3">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="hand">
+            <hardwareInterface>PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor3">
+            <hardwareInterface>PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="tran4">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="wrist">
+            <hardwareInterface>PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor4">
+            <hardwareInterface>PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    
+    <gazebo>
+        <plugin name="control" filename="libgazebo_ros_control.so"/>
+    </gazebo>
+    
+    <gazebo>
+        <plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
+            <jointName>hip, shoulder, elbow, hand, wrist</jointName>
+        </plugin>
+    </gazebo>
+
+    <material name="cool">
+      <color rgba="0.186412 0.186412 0.186412 1.0"/>
+    </material>
+
+    <material name="red">
+      <color rgba="0.8 0 0 1.0"/>
+    </material>
+
+  </robot>
